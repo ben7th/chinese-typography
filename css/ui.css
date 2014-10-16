@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'cyjlaosong77990';
+  src: url("test.svg?7") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.cyjlaosong {
+  font-family: cyjlaosong77990; }
+
 body {
   background-color: #f1f1f1;
   padding: 0;
@@ -5,12 +13,12 @@ body {
   body p {
     margin: 0;
     padding: 0;
-    margin-bottom: 0.5em; }
+    margin-bottom: 1em; }
   body .test {
-    font-size: 40px;
+    font-size: 30px;
     padding: 50px;
     color: #333; }
-  body .minijianyingbikaishu, body .cyjlaosong, body .ygytljt {
-    opacity: 0; }
+  body .cyjlaosong, body .AnJingCheng-Xing {
+    width: 50%; }
 
 /*# sourceMappingURL=ui.css.map */

@@ -7,11 +7,11 @@ class FontLoader
 
     @check_font_generated {
       success: =>
-        # console.log 'success'
+        console.log 'success'
         @load_css()
 
       failure: =>
-        # console.log 'failure'
+        console.log 'failure'
         @request_generate_font()
 
     }
@@ -51,6 +51,9 @@ class FontLoader
 
   # 字库已经创建，加载 css
   load_css: ->
+    # jQuery.get "http://www.youziku.com/webfont/css?id=#{@md5}&guid=#{@guid}&type=5", (res)=>
+    #   console.log res
+
     loadExtentFile "http://www.youziku.com/webfont/css?id=#{@md5}&guid=#{@guid}&type=5"
     console.log "http://www.youziku.com/webfont/css?id=#{@md5}&guid=#{@guid}&type=5"
     jQuery(".#{@font_klass}")
@@ -59,6 +62,7 @@ class FontLoader
 
 
 jQuery ->
-  new FontLoader('minijianyingbikaishu', 'bad5fd4fc46844c4a586cb60cadf8e54').load()
-  new FontLoader('cyjlaosong', '1280a17683f54a3f8d4784de3030d654').load()
-  new FontLoader('ygytljt', '314051d25b5f44a29225e086ea5c375e').load()
+  # new FontLoader('minijianyingbikaishu', 'bad5fd4fc46844c4a586cb60cadf8e54').load()
+  # new FontLoader('ygytljt', '314051d25b5f44a29225e086ea5c375e').load()
+  new FontLoader('cyjlaosong', '1430f17463f747ae962a57fab6cb1985').load()
+  # new FontLoader('AnJingCheng-Xing', '1280a17683f54a3f8d4784de3030d654').load()
